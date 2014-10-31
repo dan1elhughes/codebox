@@ -1,0 +1,281 @@
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#OpenSans-Light') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+    font-family: 'code_boldregular';
+    src: url('code_bold-webfont.eot');
+    src: url('code_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('code_bold-webfont.woff') format('woff'),
+         url('code_bold-webfont.ttf') format('truetype'),
+         url('code_bold-webfont.svg#code_boldregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'code_lightregular';
+    src: url('code_light-webfont.eot');
+    src: url('code_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('code_light-webfont.woff') format('woff'),
+         url('code_light-webfont.ttf') format('truetype'),
+         url('code_light-webfont.svg#code_lightregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+	font-family: OpenSans-Light, sans-serif;
+	color: #001F3F;
+	height: 100%;
+	font-size: 1.25em;
+	background-color: white;
+}
+
+body {
+	margin: 0;
+	line-height: normal;
+}
+
+*, *:after, *:before {
+    box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+	color: #888;
+	transition: all 0.3s ease-out;
+}
+
+a:hover {
+	color: orange;
+}
+
+.red {
+	color: red;
+}
+
+.green {
+	color: green;
+}
+img {
+	border: 0;
+}
+
+input, select, textarea {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+#content {
+	max-width: 1024px;
+	margin: 4em auto;
+	clear: both;
+}
+
+#title {
+	font-size: 2em;
+	font-family: code_boldregular, Courier, monospace;
+	font-weight: bold;
+	float: left;
+	margin: auto;
+	display:table-cell;
+	vertical-align:middle
+}
+
+#title:hover {
+	border-bottom: none;
+}
+
+#title span {
+	font-family: code_lightregular, Courier, monospace;
+	font-weight: normal;
+	color: orange;
+}
+
+#title:hover span {
+	color: #888;
+}
+
+nav {
+	width: 100%;
+	background-color: #eee;
+	text-align: center;
+	list-style: none;
+	z-index: 1;
+	padding: 0.25em;
+	margin: 0em;
+	top: 0;
+	left: 0;
+	right: 0;
+	overflow: auto;
+	border-bottom: 2px solid orange;
+	position: fixed;
+}
+
+nav ul {
+	margin: 0;
+	float: right;
+	display:table-cell;
+	vertical-align:middle
+}
+
+nav li {
+	display: inline;
+	padding: 0.5em;
+	display: table-cell;
+	vertical-align: middle
+}
+
+.tag {
+	font-size: 0.75em;
+	color: gray;
+	margin: 0;
+}
+
+.tag.left {
+	float: left;
+	text-align: left;
+}
+
+.tag.center {
+	float: none;
+	text-align: center;
+}
+
+.tag.right {
+	float: right;
+	text-align: right;
+}
+
+pre.prettyprint {
+	clear: both;
+	margin: 0.5em 0 2em 0;
+	word-wrap: break-word;
+	font-size: 16px;
+}
+
+pre.prettyprint.smallpost {
+}
+
+#login {
+	/* Size & position */
+	width: 100%;
+	max-width: 15em;
+	margin: 60px auto 30px;
+	padding: 10px;
+	position: relative; /* For the submit button positioning */
+
+	/* Styles */
+	background-color: #efefef;
+	border-radius: 5px;
+}
+
+#login .field {
+	}
+
+#login .field input{
+	border: none;
+	background-color: transparent !important;
+	border-bottom: 1px dotted black;
+}
+
+#login .field i {
+    color: #999;
+    text-align: center;
+	transition: all 0.3s ease-out;
+}
+
+#login input[type=text]:focus ~ i,
+#login input[type=password]:focus ~ i {
+    color: orange;
+}
+
+#newpaste textarea, #newpaste input {
+	width: 100%;
+	border: 1px solid #efefef;
+	resize: none;
+}
+
+#newpaste .settings {
+	text-align: right;
+}
+
+#newpaste pre textarea, #newpaste pre {
+	display: block;
+	margin: 0;
+}
+
+#postsTable {
+	width: 100%;
+	text-align: center;
+	border-collapse: collapse;
+}
+
+#postsTable td {
+	padding: 0.5em;
+}
+
+#postsTable tr:nth-child(even) {
+    background-color: #eee;
+}
+
+/*---Responsive---*/
+@media only screen and (max-width: 768px) {
+#title {
+	float: none;
+	display: block;
+	margin: auto;
+	text-align: center;
+}
+
+nav {
+	display: block;
+	text-align: center;
+	position: static;
+}
+
+nav ul {
+	float: none;
+	clear: both;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#postsTable td {
+	padding: 0;
+}
+
+.notablet {
+	display: none;	
+}
+
+}
+
+@media only screen and (max-width: 480px) {
+nav{
+	font-size: 0.75em;
+}
+
+nav li a{
+	background-color: #eee;
+	padding: 0.5em;
+}
+
+body {
+	margin: 0;
+	}
+
+.nomobile {
+	display: none;	
+}
+
+}
