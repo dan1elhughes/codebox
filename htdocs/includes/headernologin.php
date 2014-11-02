@@ -1,7 +1,6 @@
 <?php 
-$devMode = ($_SERVER['HTTP_HOST'] == 'localhost' ? true : false);
-include "settings.php";
-include "functions.php";
+require "settings.php";
+require "functions.php";
 
 if(isset($_SESSION['username'])) {header("location: $rootpath" . "login/");}
 

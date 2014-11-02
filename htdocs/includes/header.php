@@ -1,7 +1,6 @@
-<?php 
-$devMode = ($_SERVER['HTTP_HOST'] == 'localhost' ? true : false);
-include "settings.php";
-include "functions.php";
+<?php
+require "settings.php";
+require "functions.php";
 
 if(!isset($_SESSION['username']) && !((basename(dirname($_SERVER['PHP_SELF'])) == "login") || (basename(dirname($_SERVER['PHP_SELF'])) == "register"))) {header ("location: $rootpath" . "login/");}
 
